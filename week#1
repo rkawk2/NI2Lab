@@ -1,0 +1,17 @@
+function CalculateTime
+  %현재 날짜와 시간 입력
+  current_Time_Str = input('현재 날짜와 시간을 입력하세요. Example of : 2024-04-26 : ', 's');
+
+  %입력된 문자열을 날짜, 시간으로 변환
+  current_Time = datatime(current_Time_Str,'InputFormat', 'yyyy-MM-dd HH');
+
+  %추가할 시간 입력 받기
+  Add_Hour = input('추가할 시간 및 단위를 입력하세요 : ');
+
+  %날짜와 시간 계산
+  new_Time = current_Time + hours(Add_Hour);
+
+  %결과 출력
+  disp['계산된 날짜와 시간 : ', datastr(new_Time, 'yyyy년 mm월 dd일 HH시')]);
+end
+
